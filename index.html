@@ -17,83 +17,98 @@
     <title>Weather App</title>
   </head>
   <body>
-    <div class="body-container">
-      <header>
-        <form>
-          <input
-            type="search"
-            placeholder="Enter a city"
-            required
-            id="form-search"
-          />
-          <input type="submit" value="Search" id="form-submit" />
-        </form>
-      </header>
-      <main>
-        <div id="city">
-          <div id="city-info">
-            <h1>Melbourne</h1>
-            <p>
-              Thursday 01:05, moderate rain <br />Humidity:
-              <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
-            </p>
-          </div>
-          <div id="city-temp">
-            <span class="emoji">☀️</span>
-            <span class="temp">28</span>
-            <span class="degrees">°C</span>
-          </div>
+    <div class="container">
+      <div id="cloud-intro">
+        <div class="body-container">
+          <header>
+            <form>
+              <input
+                type="search"
+                placeholder="Enter a city"
+                required
+                id="form-search"
+              />
+              <input type="submit" value="Search" id="form-submit" />
+            </form>
+          </header>
+          <main>
+            <div id="city">
+              <div id="city-info">
+                <h1>Melbourne</h1>
+                <p>
+                  Thursday 01:05, moderate rain <br />Humidity:
+                  <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+                </p>
+              </div>
+              <div id="city-temp">
+                <span class="emoji">☀️</span>
+                <span class="temp">28</span>
+                <span class="degrees">°C</span>
+              </div>
+            </div>
+            <ul>
+              <li id="first">
+                <div class="day">Mon</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="second">
+                <div class="day">Tue</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="third">
+                <div class="day">Wed</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="fourth">
+                <div class="day">Thu</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="fifth">
+                <div class="day">Fri</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="sixth">
+                <div class="day">Sat</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+              <li id="seventh">
+                <div class="day">Sun</div>
+                <div class="emoji">☀️</div>
+                min: <span class="min-temp">0</span>°C<br />max:
+                <span class="max-temp">0</span>°C
+              </li>
+            </ul>
+          </main>
+          <footer>
+            Coded by
+            <a href="https://github.com/kikikal" target="_blank"
+              >Christina Kalyvas</a
+            >
+            on
+            <a
+              href="https://github.com/kikikal?tab=repositories"
+              target="_blank"
+              >Github</a
+            >
+            and hosted on
+            <a href="weather-app-project-ck.netlify.app" target="_blank"
+              >Netlify</a
+            >
+          </footer>
         </div>
-        <ul>
-          <li id="first">
-            <span class="day">Mon</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="second">
-            <span class="day">Tue</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="third">
-            <span class="day">Wed</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="fourth">
-            <span class="day">Thu</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="fifth">
-            <span class="day">Fri</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="sixth">
-            <span class="day">Sat</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-          <li id="seventh">
-            <span class="day">Sun</span><br />min:
-            <span class="min-temp">0</span>°C<br />max:
-            <span class="max-temp">0</span>°C
-          </li>
-        </ul>
-      </main>
-      <footer>
-        Coded by
-        <a href="https://github.com/kikikal" target="_blank"
-          >Christina Kalyvas</a
-        >
-        on
-        <a href="https://github.com/kikikal?tab=repositories" target="_blank"
-          >Github</a
-        >
-        and hosted on
-        <a href="weather-app-project-ck.netlify.app" target="_blank">Netlify</a>
-      </footer>
+      </div>
     </div>
   </body>
 </html>
