@@ -27,6 +27,8 @@ function changeCurrentTemp(response) {
   humidity.innerHTML = `${response.data.temperature.humidity}%`;
   let wind = document.querySelector("#wind");
   wind.innerHTML = `${response.data.wind.speed}km/h`;
+  let icon = document.querySelector("#icon");
+  icon.innerHTML = `<img src = "${response.data.condition.icon_url}" class = "icon"/>`;
 }
 
 function updateDate(response) {
