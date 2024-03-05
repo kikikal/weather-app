@@ -57,3 +57,25 @@ function updateDate(response) {
   time.innerHTML = `${day} ${hours}:${minutes}`;
 }
 searchCity("melbourne");
+
+function displayForecast() {
+  let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
+  let forecastHTML = "";
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `<div class="weather-forecast-date">${day}</div>
+                  <img
+                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
+                  />
+                  <div class="weather-forecast-temps">
+                    <span class="weather-forecast-max">20°C</span>
+                    <span class="weather-forecast-min">12°C</span>
+                  </div>`;
+  });
+  let forecastElement = document.querySelector("#forecast");
+  forecastElement.innerHTML = forecastHTML;
+}
+
+displayForecast();
