@@ -27,6 +27,8 @@ footer a {
 
 .weather-forecast {
   text-align: center;
+  display: flex;
+  justify-content: space-between;
 }
 
 .weather-forecast-max {

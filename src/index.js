@@ -15,7 +15,6 @@ function searchCity(response) {
 }
 
 function changeCurrentTemp(response) {
-  console.log(response);
   let currentTemp = document.querySelector("#current-temp");
   currentTemp.innerHTML = Math.round(response.data.temperature.current);
   let cityDisplay = document.querySelector("#city-name");
@@ -29,6 +28,7 @@ function changeCurrentTemp(response) {
   wind.innerHTML = `${response.data.wind.speed}km/h`;
   let icon = document.querySelector("#icon");
   icon.innerHTML = `<img src = "${response.data.condition.icon_url}" class = "icon"/>`;
+  getForecast(response.data.city);
 }
 
 function updateDate(response) {
@@ -58,24 +58,29 @@ function updateDate(response) {
 }
 searchCity("melbourne");
 
-function displayForecast() {
+function getForecast(city) {
+  let apiKey = `d37e0bate3co638094f17bb45fdb3101`;
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+  axios(apiUrl).then(displayForecast);
+}
+
+function displayForecast(response) {
+  console.log(response.data);
   let days = ["Sun", "Mon", "Tue", "Wed", "Thu"];
   let forecastHTML = "";
 
   days.forEach(function (day) {
     forecastHTML =
       forecastHTML +
-      `<div class="weather-forecast-date">${day}</div>
-                  <img
-                    src="http://shecodes-assets.s3.amazonaws.com/api/weather/icons/few-clouds-day.png"
-                  />
-                  <div class="weather-forecast-temps">
-                    <span class="weather-forecast-max">20°C</span>
-                    <span class="weather-forecast-min">12°C</span>
-                  </div>`;
+      `<div>
+            <div class="weather-forecast-date">${day}</div>
+                <div class = "weather-forecast-icon"> ☀️</div>
+                <div class="weather-forecast-temps">
+                <span class="weather-forecast-max">20°C</span>
+                <span class="weather-forecast-min">12°C</span>
+            </div>
+        </div>`;
   });
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = forecastHTML;
 }
-
-displayForecast();
