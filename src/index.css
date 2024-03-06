@@ -17,7 +17,7 @@ footer {
   border-top: 1px solid #eaf4fe;
   padding: 25px 0 10px 0;
   color: #6d7779;
-  font-size: 12px;
+  font-size: 13px;
 }
 
 footer a {
@@ -33,6 +33,15 @@ footer a {
 
 .weather-forecast-max {
   font-weight: bold;
+}
+.weather-forecast-icon {
+  display: block;
+  margin: 0, auto;
+  padding: 0;
+}
+
+.weather-forecast-temps {
+  font-size: 14px;
 }
 
 #city {
@@ -94,7 +103,7 @@ footer a {
 .body-container {
   background: white;
   border-radius: 10px;
-  width: 60%;
+  width: 65%;
   max-width: 700px;
   margin: 0 auto;
   padding: 25px 40px;
